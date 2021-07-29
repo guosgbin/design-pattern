@@ -1,4 +1,4 @@
-package cn.guosgbin.pattern.singleton.hungry;
+package cn.guosgbin.pattern.singleton.eager;
 
 /**
  * 饿汉-静态成员变量-静态代码块初始化-线程安全

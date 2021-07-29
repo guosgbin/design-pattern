@@ -17,7 +17,7 @@ public class Singleton04 {
      * 同步方法
      */
     public static synchronized Singleton04 getInstance() {
-        if (INSTANCE != null) {
+        if (INSTANCE == null) {
             INSTANCE = new Singleton04();
         }
         return INSTANCE;
