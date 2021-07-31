@@ -28,9 +28,7 @@ public class WelfareController {
         if (uid == null) {
             return "QQ号不能为空";
         }
-        String msg = "发放失败";
         VipService vipService = vipServiceFactory.getVipService(type);
-        msg = vipService.sendVip(uid);
-        return msg;
+        return vipService.sendVip(uid);
     }
 }

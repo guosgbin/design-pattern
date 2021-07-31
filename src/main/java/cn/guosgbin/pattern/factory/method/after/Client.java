@@ -1,7 +1,5 @@
 package cn.guosgbin.pattern.factory.method.after;
 
-import cn.guosgbin.pattern.factory.method.before.WelfareController;
-
 /**
  * @author: Dylan kwok GSGB
  * @date: 2021/7/31 8:46
