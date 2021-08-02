@@ -11,7 +11,7 @@ public class ComputerFactory {
         if (type == 1) {
             return new DesktopComputer(memory, mainboard, cpu);
         } else if (type == 2) {
-            return new laptop(memory, mainboard, cpu);
+            return new Laptop(memory, mainboard, cpu);
         }
         return null;
     }

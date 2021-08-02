@@ -3,8 +3,8 @@ package cn.guosgbin.pattern.factory.method.demo;
 /**
  * 笔记本电脑
  */
-public class laptop extends Computer {
-    public laptop(String memory, String mainboard, String cpu) {
+public class Laptop extends Computer {
+    public Laptop(String memory, String mainboard, String cpu) {
         super(memory, mainboard, cpu);
     }
 

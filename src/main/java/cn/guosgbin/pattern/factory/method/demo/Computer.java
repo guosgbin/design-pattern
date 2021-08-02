@@ -22,6 +22,8 @@ public abstract class Computer {
 
     @Override
     public String toString() {
-        return "内存 = " + this.getMemory() + ", 主板 = " + this.getMainboard() + ", CPU = " + this.getCPU();
+        return "内存 = " + this.getMemory() +
+                ", 主板 = " + this.getMainboard() +
+                ", CPU = " + this.getCPU();
     }
 }
