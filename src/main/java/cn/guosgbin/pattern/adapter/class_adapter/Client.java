@@ -1,6 +1,6 @@
-package cn.guosgbin.pattern.adapter.common;
+package cn.guosgbin.pattern.adapter.class_adapter;
 
-import cn.guosgbin.pattern.adapter.class_adapter.VoltageAdapter;
+import cn.guosgbin.pattern.adapter.common.Phone;
 
 /**
  * @author: Dylan kwok GSGB

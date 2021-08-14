@@ -11,7 +11,8 @@ public class Phone {
         int voltage = charger.output5V();
         if(voltage == 5){
             System.out.println("手机正在以" + voltage + "V电压充电...");
+        } else {
+            throw new UnsupportedOperationException("电压不正常");
         }
-        throw new UnsupportedOperationException("电压不正常");
     }
 }
