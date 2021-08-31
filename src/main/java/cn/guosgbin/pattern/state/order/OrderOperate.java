@@ -6,6 +6,10 @@ package cn.guosgbin.pattern.state.order;
  * 2.已付款 -> 放行，取消，申诉
  * 3.取消状态 -> 申诉
  * 4.申诉中状态 -> 申诉，取消
+ * 5.成功状态 -> 申诉
+ *
+ * 6.申诉交易成功状态 -> 申诉
+ * 7.申诉交易失败状态 -> 申诉
  *
  *
  * @author: Dylan kwok GSGB
@@ -15,14 +19,14 @@ package cn.guosgbin.pattern.state.order;
  */
 public interface OrderOperate {
     // 付款
-    void pay();
+    void pay(Order order);
 
     // 取消交易
-    void cancel();
+    void cancel(Order order);
 
     // 申诉
-    void appeal();
+    void appeal(Order order);
 
     // 放行数字币
-    void release();
+    void release(Order order);
 }
