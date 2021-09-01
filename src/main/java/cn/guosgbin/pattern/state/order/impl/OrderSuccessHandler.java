@@ -37,7 +37,7 @@ public class OrderSuccessHandler implements OrderOperate {
 
     @Override
     public void release(Order order) {
-        throw new UnsupportedOperationException("成功状态继续放行");
+        throw new UnsupportedOperationException("成功状态不能放行");
     }
 
     @Override

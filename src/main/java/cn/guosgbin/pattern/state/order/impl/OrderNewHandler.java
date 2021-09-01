@@ -34,7 +34,7 @@ public class OrderNewHandler implements OrderOperate {
         // 做一些取消操作
         order.setStatus(OrderStatusEnum.CANCEL);
         orderStatusCache.setOrderStatus(order.getId(), OrderStatusEnum.CANCEL.getStatus());
-        log.debug("买方付款完毕, order info = {}", JSONObject.toJSONString(order));
+        log.debug("取消付款完毕, order info = {}", JSONObject.toJSONString(order));
     }
 
     @Override

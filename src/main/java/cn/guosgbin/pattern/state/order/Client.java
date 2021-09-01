@@ -1,6 +1,7 @@
 package cn.guosgbin.pattern.state.order;
 
 import cn.guosgbin.pattern.state.order.cache.OrderStatusCache;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import lombok.experimental.var;
 
 import java.math.BigDecimal;
@@ -17,7 +18,7 @@ public class Client {
 
 
     public static void main(String[] args) {
-        Order order = initOrder();
+        Order order = initOrder(OrderStatusEnum.NEW);
 
         orderOperate.pay(order);
         System.out.println("当前订单状态:" + orderStatusCache.getOrderStatus(order.getId()));
@@ -28,8 +29,8 @@ public class Client {
         orderOperate.cancel(order);
         System.out.println("当前订单状态:" + orderStatusCache.getOrderStatus(order.getId()));
 
-        orderOperate.release(order);
-        System.out.println("当前订单状态:" + orderStatusCache.getOrderStatus(order.getId()));
+//        orderOperate.release(order);
+//        System.out.println("当前订单状态:" + orderStatusCache.getOrderStatus(order.getId()));
 
 
     }
@@ -37,14 +38,14 @@ public class Client {
     /**
      * 模拟初始化订单
      */
-    private static Order initOrder() {
+    private static Order initOrder(OrderStatusEnum status) {
         Order order = new Order();
         order.setId(123456789L);
         order.setAmount(new BigDecimal(100));
         order.setBuyerUid(10086L);
         order.setSellerUid(10000L);
-        order.setStatus(OrderStatusEnum.NEW);
-        OrderStatusCache.getInstance().setOrderStatus(order.getId(), OrderStatusEnum.NEW.getStatus());
+        order.setStatus(status);
+        OrderStatusCache.getInstance().setOrderStatus(order.getId(), status.getStatus());
         return order;
     }
 }
