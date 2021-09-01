@@ -7,6 +7,11 @@ import java.math.BigDecimal;
 @Data
 public class Order {
     /**
+     * 订单ID
+     */
+    private Long id;
+
+    /**
      * 卖家UID
      */
     private Long sellerUid;

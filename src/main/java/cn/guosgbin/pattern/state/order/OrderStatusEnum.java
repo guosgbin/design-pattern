@@ -26,4 +26,12 @@ public enum OrderStatusEnum {
         this.status = status;
         this.desc = desc;
     }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }

@@ -29,4 +29,6 @@ public interface OrderOperate {
 
     // 放行数字币
     void release(Order order);
+
+    OrderStatusEnum getCurrentStatus(Order order);
 }
