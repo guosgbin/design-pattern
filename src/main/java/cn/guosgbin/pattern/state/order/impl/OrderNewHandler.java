@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class OrderNewHandler implements OrderOperate {
-
+    // 模拟缓存
     private OrderStatusCache orderStatusCache = OrderStatusCache.getInstance();
 
     @Override
