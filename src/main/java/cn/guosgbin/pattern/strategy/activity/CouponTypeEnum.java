@@ -20,4 +20,12 @@ public enum  CouponTypeEnum {
         this.type = type;
         this.desc = desc;
     }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }
