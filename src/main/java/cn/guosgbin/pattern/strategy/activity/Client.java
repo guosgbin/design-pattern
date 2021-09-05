@@ -16,18 +16,21 @@ public class Client {
     public static void main(String[] args) {
         // 打折券
         Discount discountStrategy = StrategyManager.getDiscountStrategy(CouponTypeEnum.DISCOUT.getType());
-
+        BigDecimal discountAmount = discountStrategy.calculate(new BigDecimal("0.85"), new BigDecimal(108));
+        System.out.println(discountAmount);
 
         // 满减
         Map<String, BigDecimal> param = new HashMap<>();
-        param.put("threshold", new BigDecimal(100));
+        // 满99-10
+        param.put("threshold", new BigDecimal(99));
         param.put("discount", new BigDecimal(10));
-
         Discount couponStrategy = StrategyManager.getDiscountStrategy(CouponTypeEnum.COUPON.getType());
-        BigDecimal discountAmount = couponStrategy.calculate(param, new BigDecimal(101));
+        BigDecimal couponAmount = couponStrategy.calculate(param, new BigDecimal(101));
+        System.out.println(couponAmount);
 
-        System.out.println(discountAmount);
-
-
+        // 无门槛券
+        Discount voucherStrategy = StrategyManager.getDiscountStrategy(CouponTypeEnum.VOUCHER.getType());
+        BigDecimal voucherAmount = voucherStrategy.calculate(new BigDecimal("20"), new BigDecimal(122));
+        System.out.println(voucherAmount);
     }
 }

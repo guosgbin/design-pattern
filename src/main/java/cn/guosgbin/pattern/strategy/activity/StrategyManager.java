@@ -15,7 +15,7 @@ import java.util.Map;
  * 古之立大事者，不惟有超世之才，亦必有坚忍不拔之志——苏轼
  */
 public class StrategyManager {
-    private static Map<Integer, Discount> discountMap = new HashMap<>();
+    private static final Map<Integer, Discount> discountMap = new HashMap<>();
 
     static {
         discountMap.put(CouponTypeEnum.DISCOUT.getType(), new DiscountStrategy());
